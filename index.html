@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Projetos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Banner principal -->
+  <section class="banner">
+    <h1>Bem-vindo ao meu Portifólio!</h1>
+    <p>"Um guia com alguns de meus projetos já realizados."</p>
+    <p>Aqui você encontrará uma seleção dos meus projetos mais recentes e relevantes. Clique em qualquer projeto para saber como ele foi criado.</p>
+  </section>
+
+         <!-- Benefícios -->
+  <section class="beneficios">
+    <h2>Porque escolher ver meu Portifólio?</h2>
+    <div class="beneficio-card">
+      <p>Meu site de portfólio é a melhor forma de mostrar quem eu sou e o que faço de maneira profissional e organizada. Ele reúne meus principais trabalhos, projetos e conquistas, tudo apresentado de forma clara e atrativa. É como uma vitrine online que permite que clientes, empregadores ou parceiros conheçam minhas habilidades e vejam a qualidade do meu trabalho. Além disso, é uma maneira de transmitir credibilidade e reforçar minha marca pessoal, tornando mais fácil compartilhar o que eu faço e me destacar no mercado.</p>
+    </div>
+  </section>
+
+  <section class="programa" id="idprograma">
+    <h3>Linguagens de Programação e Aplicativos</h3>
+    <p>Front-End (HTML, CSS e JavaScript): é a interface visual e interativa que os usuários veem e utilizam. O trabalho de front-end envolve a criação e a otimização da interface para garantir uma experiência de usuário agradável e eficiente. O aplicativo Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft. Onde crie os códigos em HTML, CSS e JavaScript para o site ganhar vida e formar o que estão presenciando. E o aplicativo Figma é um editor gráfico de vetor e prototipagem de projetos de design baseado principalmente no navegador web, com ferramentas offline adicionais para aplicações desktop para GNU/Linux, macOS e Windows. Foi onde criei um esboço de como ficaria o site, seu design e a partir desse modelo criar este site.</p>
+
+        <section class="projects-container" id="projects-container">
+            <!-- Os projetos serão adicionados aqui pelo JavaScript -->
+        </section>
+    </main>
+
+    <section class="contact">
+        <h3>Contatos</h3>
+        <p>Para ver mais projetos meus, acesse meu instagram profissional: https://www.instagram.com/cientistacomputacao_luanaroza/</p>
+    </section>
+
+        <!-- Link com mensagem personalizada -->
+        <a href="https://wa.me/5551991484453?text=Olá,%20gostaria%20de%20mais%20informações!" target="_blank"> </a>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+         <!-- Link com ícone do WhatsApp -->
+        <a href="https://wa.me/5551991484453" target="_blank">
+        <i class="fab fa-whatsapp" style="font-size: 24px; color: rgb(0, 255, 0);"></i>
+            Entre em contato
+
+    <footer>
+        © 2024 - Meu Portfólio | Desenvolvido por <a href="#">Luana Roza</a>
+    </footer>
+
+    <script>
+        // Lista de projetos
+        const projects = [
+            {
+                title: "Projeto 1",
+                description: "Um site de viagens criado por mim do zero.",
+                link: " https://luh095.github.io/SiteViagem/"
+            },
+            {
+                title: "Projeto 2",
+                description: "Exploração de novas tecnologias e frameworks.",
+                link: "https://luh095.github.io/SiteTecnologia/"
+            },
+            {
+                title: "Projeto 3",
+                description: "Um site voltado para cursos de tecnologia.",
+                link: " https://luh095.github.io/LandingTecnology/"
+            },
+            {
+                title: "Projeto 4",
+                description: "Laboratório Virtual: Uma plataforma onde os usuários podem testar pequenos projetos de programação ou simulações.",
+                link: " https://luh095.github.io/LaboratorioVirtual/"
+            },
+            {
+                title: "Projeto 6",
+                description: "Sistema de login e registro.",
+                link: " https://luh095.github.io/LoginRegistro/"
+            },
+            {
+                title: "Projeto 7",
+                description: "Um site para quem é fã de Harry Potter.",
+                link: " https://luh095.github.io/SiteHarryPotter/"
+            },
+            {
+                title: "Projeto 8",
+                description: "Um site para quem é fã de Star Wars.",
+                link: " https://luh095.github.io/SiteStarWars/"
+            },
+            {
+                title: "Projeto 9",
+                description: "Gerador de Ideias Criativas: Uma ferramenta online que gera ideias para projetos, nomes de empresas, roteiros, etc.",
+                link: "https://luh095.github.io/GeradorIdeias/"
+            },
+            {
+                title: "Projeto 10",
+                description: "Gerador de Decisões Aleatórias: Um site para ajudar pessoas indecisas, com funções como, o que comer, o que assistir ou devo sair hoje?",
+                link: " https://luh095.github.io/GeradorDecisao/"
+            }
+        ];
+
+        // Função para renderizar os projetos
+        const renderProjects = () => {
+            const container = document.getElementById('projects-container');
+
+            projects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+
+                card.innerHTML = `
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <button onclick="window.open('${project.link}', '_blank')">Ver Projeto</button>
+                `;
+
+                container.appendChild(card);
+            });
+        };
+
+        // Chamar a função para renderizar os projetos
+        renderProjects();
+    </script>
+</body>
+</html>
